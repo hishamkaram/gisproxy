@@ -10,6 +10,15 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+//DBConnection  database connection string
+type DBConnection struct {
+	Host     string
+	Port     int
+	Name     string
+	Username string
+	Password string
+}
+
 //GISProxy  type
 type GISProxy struct {
 	Geoserver []string
@@ -18,7 +27,7 @@ type GISProxy struct {
 	Address   string
 	SSL       bool
 	logger    *logrus.Logger
-	DB        string
+	DB        *DBConnection
 	Router    *mux.Router
 }
 
@@ -29,6 +38,20 @@ func (server *GISProxy) GetReverseProxy(remoteURL string) *httputil.ReverseProxy
 		panic(err)
 	}
 	return httputil.NewSingleHostReverseProxy(remote)
+}
+
+//StartProxyServer start new server
+func (server *GISProxy) StartProxyServer() {
+	server.SetLogger()
+	server.SetRouter()
+	server.SetRoutes()
+	server.MigrateDatabase()
+	server.LoadData()
+	http.Handle("/", server.Router)
+	err := http.ListenAndServe(":8081", nil)
+	if err != nil {
+		server.logger.Fatal(err)
+	}
 }
 
 //SetLogger sets instance logger
