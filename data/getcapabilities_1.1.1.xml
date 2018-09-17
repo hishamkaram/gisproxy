@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://www.scemdmitigation.org/geoserver/schemas/wms/1.1.1/WMS_MS_Capabilities.dtd">
+<WMT_MS_Capabilities version="1.1.1" updateSequence="4681">
+  <Service>
+    <Name>OGC:WMS</Name>
+    <Title>GeoNode Local GeoServer</Title>
+    <Abstract>This is a description of your Web Map Server.</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoserver.sourceforge.net/html/index.php"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization/>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType/>
+        <Address/>
+        <City/>
+        <StateOrProvince/>
+        <PostCode/>
+        <Country/>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress/>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom xml</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=geojson</Format>
+        <Format>application/json;type=topojson</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/openlayers</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss xml</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml</Format>
+        <Format>application/vnd.google-earth.kml xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>application/vnd.google-earth.kmz xml</Format>
+        <Format>application/vnd.google-earth.kmz+xml</Format>
+        <Format>application/vnd.google-earth.kmz;mode=networklink</Format>
+        <Format>application/x-protobuf;type=mapbox-vector</Format>
+        <Format>application/x-sqlite3</Format>
+        <Format>atom</Format>
+        <Format>geojson</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/gif;subtype=animated</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png8</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg</Format>
+        <Format>image/svg xml</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>kml</Format>
+        <Format>kmz</Format>
+        <Format>mbtiles</Format>
+        <Format>openlayers</Format>
+        <Format>pbf</Format>
+        <Format>rss</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>topojson</Format>
+        <Format>utfgrid</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <DescribeLayer>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </DescribeLayer>
+      <GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/gif</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetLegendGraphic>
+      <GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>application/json</Format>
+      <Format>text/javascript</Format>
+    </Exception>
+    <UserDefinedSymbolization SupportSLD="1" UserLayer="1" UserStyle="1" RemoteWFS="1"/>
+    <Layer>
+      <Title>GeoNode Local GeoServer</Title>
+      <Abstract>This is a description of your Web Map Server.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <SRS>EPSG:4326</SRS>
+      <SRS>EPSG:3785</SRS>
+      <SRS>EPSG:3857</SRS>
+      <SRS>EPSG:900913</SRS>
+      <SRS>EPSG:32647</SRS>
+      <SRS>EPSG:32736</SRS>
+      <LatLonBoundingBox minx="-84.39815764785614" miny="31.902209395165876" maxx="-78.0379110744925" maxy="35.41641843255573"/>
+      <BoundingBox SRS="EPSG:4326" minx="-84.39815764785614" miny="31.902209395165876" maxx="-78.0379110744925" maxy="35.41641843255573"/>
+      <BoundingBox SRS="EPSG:3785" minx="-9395159.933249772" miny="3727844.919009892" maxx="-8687140.52338327" maxy="4195802.774038236"/>
+      <BoundingBox SRS="EPSG:3857" minx="-9395159.933249772" miny="3750480.9246924506" maxx="-8687140.52338327" maxy="4220615.7302741"/>
+      <BoundingBox SRS="EPSG:900913" minx="-9395159.933249772" miny="3750480.9246924506" maxx="-8687140.52338327" maxy="4220615.7302741"/>
+      <BoundingBox SRS="EPSG:32647" minx="-1.1983617904139484E8" miny="9.486413820794739E7" maxx="1.1764086450125147E8" maxy="1.9922176132015195E8"/>
+      <BoundingBox SRS="EPSG:32736" minx="-7686679.05569141" miny="2.7869813993023712E7" maxx="-3710132.5682065887" maxy="3.476805912656783E7"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:FinalMitigationProjects</Name>
+        <Title>Mitigation Projects</Title>
+        <Abstract>No abstract provided</Abstract>
+        <KeywordList>
+          <Keyword>FinalMitigationProjects</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-83.073174" miny="32.387756" maxx="-78.664363" maxy="35.0761025"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.073174" miny="32.387756" maxx="-78.664363" maxy="35.0761025"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9247663.428261012" miny="3791425.13540387" maxx="-8756876.83273723" maxy="4149664.0498474184"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9247663.428261012" miny="3814317.9454532866" maxx="-8756876.83273723" maxy="4174227.985123302"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9247663.428261012" miny="3814317.9454532866" maxx="-8756876.83273723" maxy="4174227.985123302"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1677595183235088E8" miny="1.0534908261386186E8" maxx="1.2019678323727603E8" maxy="1.8570503700594497E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7237188.623500929" miny="2.8393774644140385E7" maxx="-4350935.125531857" maxy="3.3263040650399357E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=d3a98a7e-6c4e-4961-b9be-6a122b41a918"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Mitigation_projects</Name>
+          <Title>geonode:Mitigation_projects</Title>
+          <LegendURL width="186" height="160">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AFinalMitigationProjects"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:Hail</Name>
+        <Title>Hail</Title>
+        <Abstract>geonode.public.Hail MULTILINESTRING EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Hail</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.33796220266349" miny="32.072428955648135" maxx="-78.04050665013145" maxy="35.22056102784809"/>
+        <BoundingBox SRS="EPSG:26917" minx="287153.28125" miny="3552030.75" maxx="769490.75" maxy="3897547.25"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.33796220266349" miny="32.072428955648135" maxx="-78.04050665013145" maxy="35.22056102784809"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9277139.51614958" miny="3750078.282697794" maxx="-8687429.461541712" maxy="4169200.984942597"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9277139.51614958" miny="3772821.8126062606" maxx="-8687429.461541712" maxy="4193895.0497581162"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9277139.51614958" miny="3772821.8126062606" maxx="-8687429.461541712" maxy="4193895.0497581162"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1740866849977249E8" miny="1.0118127897488412E8" maxx="1.1974840478258689E8" maxy="1.9285293686999914E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7546071.011594501" miny="2.802654710196256E7" maxx="-4190848.6922583487" maxy="3.369566605273134E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=2f81b942-af4d-4970-8717-71af178967a0"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Hail</Name>
+          <Title>geonode:Hail</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AHail"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:HurricaneTracks</Name>
+        <Title>Hurricane Tracks</Title>
+        <Abstract>geonode.public.HurricaneTracks MULTILINESTRING EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>HurricaneTracks</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.87949162093848" miny="32.01606677878357" maxx="-78.53362082330108" maxy="35.18862730245312"/>
+        <BoundingBox SRS="EPSG:26917" minx="328847.552952789" miny="3544689.18333574" maxx="724635.130599458" maxy="3894000.9413919"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.87949162093848" miny="32.01606677878357" maxx="-78.53362082330108" maxy="35.18862730245312"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9226102.804448253" miny="3742711.8765062876" maxx="-8742322.680201901" maxy="4164869.8262975635"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9226102.804448254" miny="3765419.82635334" maxx="-8742322.680201901" maxy="4189544.4783416027"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9226102.804448254" miny="3765419.82635334" maxx="-8742322.680201901" maxy="4189544.4783416027"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1802960929614434E8" miny="1.0292600208301218E8" maxx="1.197348593698363E8" maxy="1.9486939555528763E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7519437.5580690345" miny="2.8270394658881783E7" maxx="-4344134.092534446" maxy="3.3421848572638035E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=17e5034c-874e-4868-961a-164bbcca9a57"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:HurricaneTracks</Name>
+          <Title>geonode:HurricaneTracks</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AHurricaneTracks"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:Jurisdictions</Name>
+        <Title>Jurisdictions</Title>
+        <Abstract>geonode.public.Jurisdictions MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>Jurisdictions</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.36829718563203" miny="32.01464592988563" maxx="-78.50751359607301" maxy="35.22350728879081"/>
+        <BoundingBox SRS="EPSG:26917" minx="284396.287900001" miny="3544582.0961" maxx="726918.873900002" maxy="3897831.401"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36829718563203" miny="32.01464592988563" maxx="-78.50751359607301" maxy="35.22350728879081"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280516.391006859" miny="3742526.2339998023" maxx="-8739416.436960848" maxy="4169600.671781563"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280516.391006859" miny="3765233.2866085325" maxx="-8739416.436960848" maxy="4194296.5272580325"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280516.391006859" miny="3765233.2866085325" maxx="-8739416.436960848" maxy="4194296.5272580325"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1651798010960856E8" miny="1.0205862479971397E8" maxx="1.2104467838399142E8" maxy="1.9630732403989846E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7524039.101526028" miny="2.8234467107951812E7" maxx="-4180288.4235917833" maxy="3.3783320022274174E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=515c901b-09f4-4596-9d28-aa433d165e7c"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Jurisdictions</Name>
+          <Title>geonode:Jurisdictions</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AJurisdictions"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:Other_HealthCare</Name>
+        <Title>Other HealthCare</Title>
+        <Abstract>geonode.public.Other_HealthCare POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>Other_HealthCare</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.14775967055758" miny="32.11282670925859" maxx="-78.59025653996126" maxy="35.200123586688036"/>
+        <BoundingBox SRS="EPSG:26917" minx="304430.75" miny="3555310.25" maxx="719442.5625" maxy="3895244.25"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.14775967055758" miny="32.11282670925859" maxx="-78.59025653996126" maxy="35.200123586688036"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9255966.267127957" miny="3755360.996867816" maxx="-8748627.339341225" maxy="4166428.864844885"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9255966.267127957" miny="3778130.01501087" maxx="-8748627.339341225" maxy="4191110.5064766794"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9255966.267127957" miny="3778130.01501087" maxx="-8748627.339341225" maxy="4191110.5064766794"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1705269942821857E8" miny="1.0277997014449587E8" maxx="1.2061142211772686E8" maxy="1.930730785575628E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7439097.282201718" miny="2.8288342445621476E7" maxx="-4259762.395526425" maxy="3.352717261336056E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=5c4fe6dd-ade1-4a6c-be04-65d08cdaecd1"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Other_HealthCare</Name>
+          <Title>geonode:Other_HealthCare</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AOther_HealthCare"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:Tornado</Name>
+        <Title>Tornado Paths by EF Scale</Title>
+        <Abstract>geonode.public.Tornado MULTILINESTRING EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>Tornado</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.32146202789053" miny="32.08725410267974" maxx="-78.3013216405671" maxy="35.41641843255573"/>
+        <BoundingBox SRS="EPSG:26917" minx="289164.6875" miny="3553059.75" maxx="745125.6875" maxy="3919240.25"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.32146202789053" miny="32.08725410267974" maxx="-78.3013216405671" maxy="35.41641843255573"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9275302.725095853" miny="3752016.6565063945" maxx="-8716463.25346826" maxy="4195802.773916475"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9275302.725095853" miny="3774769.5414210274" maxx="-8716463.25346826" maxy="4220615.7302741"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9275302.725095853" miny="3774769.5414210274" maxx="-8716463.25346826" maxy="4220615.7302741"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1762161053612524E8" miny="9.716210804409358E7" maxx="1.2098725662971403E8" maxy="1.9331872302496746E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7498220.851181795" miny="2.8009289718082376E7" maxx="-4069121.675631428" maxy="3.367030566921068E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=f164891e-005e-4a43-b9a6-20bf3f8d9a14"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Tornado</Name>
+          <Title>geonode:Tornado</Title>
+          <LegendURL width="33" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3ATornado"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:Wildfire</Name>
+        <Title>Wildfire</Title>
+        <Abstract>geonode.public.Wildfire MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>Wildfire</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.76553564043908" miny="32.118181949651685" maxx="-78.69009129047936" maxy="35.11438026200824"/>
+        <BoundingBox SRS="EPSG:26917" minx="339083.093881345" miny="3555716.49844093" maxx="710564.558845371" maxy="3885761.46560022"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.76553564043908" miny="32.118181949651685" maxx="-78.69009129047936" maxy="35.11438026200824"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9213417.282726213" miny="3756061.465525946" maxx="-8759740.892932374" maxy="4154806.362714095"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9213417.282726213" miny="3778833.8615907338" maxx="-8759740.892932374" maxy="4179435.849098456"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9213417.282726213" miny="3778833.8615907338" maxx="-8759740.892932374" maxy="4179435.849098456"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1790653740453126E8" miny="1.0502267130888017E8" maxx="1.195986948990982E8" maxy="1.921221163168946E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7420920.653897585" miny="2.8394301483423837E7" maxx="-4424707.9491684865" maxy="3.324693057054106E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=1ae09c88-692c-461c-b225-221877de29ee"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Wildfire</Name>
+          <Title>geonode:Wildfire</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AWildfire"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:Wind</Name>
+        <Title>Wind</Title>
+        <Abstract>geonode.public.Wind MULTILINESTRING EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Wind</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.92925895327271" miny="32.052363931545905" maxx="-78.0379110744925" maxy="35.21139725925021"/>
+        <BoundingBox SRS="EPSG:26917" minx="233234.34375" miny="3549811.0" maxx="769759.0" maxy="3896486.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.92925895327271" miny="32.052363931545905" maxx="-78.0379110744925" maxy="35.21139725925021"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9342962.369335115" miny="3747455.3053260045" maxx="-8687140.52338327" maxy="4167957.930755331"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9342962.369335115" miny="3770186.171260598" maxx="-8687140.52338327" maxy="4192646.4256434063"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9342962.369335115" miny="3770186.171260598" maxx="-8687140.52338327" maxy="4192646.4256434063"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1537450082996503E8" miny="1.0139678588370453E8" maxx="1.212428004557867E8" maxy="1.9521068174052808E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7561157.98522166" miny="2.8031821101521686E7" maxx="-4021665.486598422" maxy="3.4161133051928036E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=520aadd8-588c-42cb-a884-ce7a30ea2acf"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:Wind</Name>
+          <Title>geonode:Wind</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3AWind"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:airports</Name>
+        <Title>Airport Facilities</Title>
+        <Abstract>The Airports database is a geographic point database of aircraft landing facilities in the United States and U.S. Territories. Attribute data is provided on the physical and operational characteristics of the landing facility, current usage including enplanements and aircraft operations, congestion levels and usage categories. This geospatial data is derived from the FAA's National Airspace System Resource Aeronautical Data Product.
+</Abstract>
+        <KeywordList>
+          <Keyword>airports</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.11884763862547" miny="32.188726808812916" maxx="-78.60276027498202" maxy="35.19591694024433"/>
+        <BoundingBox SRS="EPSG:26917" minx="307055.09375" miny="3563706.0" maxx="718314.25" maxy="3894778.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.11884763862547" miny="32.188726808812916" maxx="-78.60276027498202" maxy="35.19591694024433"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9252747.794455476" miny="3765292.6538711935" maxx="-8750019.248756751" maxy="4165858.3656513896"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9252747.794455476" miny="3788109.528427423" maxx="-8750019.248756751" maxy="4190537.4498159895"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9252747.794455476" miny="3788109.528427423" maxx="-8750019.248756751" maxy="4190537.4498159895"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1711636203619948E8" miny="1.0290537696259412E8" maxx="1.2055522122980797E8" maxy="1.908276076333358E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7380975.365702719" miny="2.8296983482006513E7" maxx="-4270859.234977061" maxy="3.3433569623230577E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=ca934191-5847-486f-9e3e-13def1bb5f92"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:airports</Name>
+          <Title>geonode:airports</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aairports"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:city_limits</Name>
+        <Title>Incorporated Communities </Title>
+        <Abstract>geonode.public.city_limits MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>city_limits</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.39066518978888" miny="32.070383313193574" maxx="-78.51273715696153" maxy="35.20837699849592"/>
+        <BoundingBox SRS="EPSG:26917" minx="284516.8519" miny="3552466.082" maxx="724286.035" maxy="3894442.5703"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36608824029423" miny="32.08623667499027" maxx="-78.53733055217029" maxy="35.192956069825705"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280270.492336666" miny="3751883.618661487" maxx="-8742735.645330602" maxy="4165456.8346428904"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280270.492336666" miny="3774635.8616059166" maxx="-8742735.645330602" maxy="4190134.1186390836"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280270.492336666" miny="3774635.8616059166" maxx="-8742735.645330602" maxy="4190134.1186390836"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1637681805770126E8" miny="1.028398640386637E8" maxx="1.2101696473649551E8" maxy="1.9431824499967507E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7466541.467617731" miny="2.826930339456839E7" maxx="-4200981.497830851" maxy="3.371334991342264E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=babc240a-ada7-44f9-aa67-3f5e9f928491"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:city_limits</Name>
+          <Title>geonode:city_limits</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acity_limits"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:cofc_liquifaction</Name>
+        <Title>Liquefaction Index</Title>
+        <Abstract>No abstract provided</Abstract>
+        <KeywordList>
+          <Keyword>flood</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>cofc_liquifaction</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.36454368489932" miny="32.0458323254725" maxx="-78.54150620393975" maxy="35.21620651295804"/>
+        <BoundingBox SRS="EPSG:26917" minx="284718.9681" miny="3547973.8797" maxx="723841.6462" maxy="3897020.986"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36454368489932" miny="32.0458323254725" maxx="-78.54150620393975" maxy="35.21620651295804"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280098.5532166" miny="3746601.5938932337" maxx="-8743200.476759309" maxy="4168610.2825788413"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280098.5532166" miny="3769328.336809592" maxx="-8743200.476759309" maxy="4193301.7007109676"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280098.5532166" miny="3769328.336809592" maxx="-8743200.476759309" maxy="4193301.7007109676"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1644965616960397E8" miny="1.0230063887755272E8" maxx="1.210995889027995E8" maxy="1.9550761086175793E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7495958.629906368" miny="2.825497219329197E7" maxx="-4186175.6514665335" maxy="3.3751010697148204E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=2f8d6c8a-606f-4679-a9b0-b98e68289780"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:cofc_liquifaction</Name>
+          <Title>geonode:cofc_liquifaction</Title>
+          <LegendURL width="33" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acofc_liquifaction"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:college_tech</Name>
+        <Title>Technical Colleges</Title>
+        <Abstract>geonode.public.college_tech POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>college_tech</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.99974615991522" miny="32.28684420117715" maxx="-78.90701814548846" maxy="35.104208988169376"/>
+        <BoundingBox SRS="EPSG:26917" minx="317702.1602" miny="3574033.4863" maxx="690802.1831" maxy="3884600.5401"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.99974615991522" miny="32.28684420117715" maxx="-78.90701814548846" maxy="35.104208988169376"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9239489.478492726" miny="3778143.8835512693" maxx="-8783889.079971373" maxy="4153428.4666508087"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9239489.478492726" miny="3801022.562105665" maxx="-8783889.079971373" maxy="4178051.762392097"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9239489.478492726" miny="3801022.562105665" maxx="-8783889.079971373" maxy="4178051.762392097"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1670192231020704E8" miny="1.0575667425990202E8" maxx="1.2073004325607046E8" maxy="1.8867027660484558E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7262797.992473627" miny="2.8502404359717518E7" maxx="-4365087.96916106" maxy="3.3260017832788505E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=d19c375e-45a6-4ece-8721-185a94baed3b"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:college_tech</Name>
+          <Title>geonode:college_tech</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acollege_tech"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:college_univ</Name>
+        <Title>Colleges and Universities</Title>
+        <Abstract>geonode.public.college_univ POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>college_univ</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.86379213244078" miny="32.270441167073756" maxx="-78.73785739833878" maxy="35.09120409416351"/>
+        <BoundingBox SRS="EPSG:26917" minx="330075.1875" miny="3572518.0" maxx="706266.0" maxy="3883175.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.86379213244078" miny="32.270441167073756" maxx="-78.73785739833878" maxy="35.09120409416351"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9224355.145382976" miny="3775994.4691622523" maxx="-8765058.19173646" maxy="4151666.9545641495"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9224355.145382976" miny="3798862.820251963" maxx="-8765058.19173646" maxy="4176282.3338523954"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9224355.145382976" miny="3798862.820251963" maxx="-8765058.19173646" maxy="4176282.3338523954"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1741048654202436E8" miny="1.0568491581198019E8" maxx="1.198967231672014E8" maxy="1.8817625718509933E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7300843.207086976" miny="2.843291774696491E7" maxx="-4412152.204160153" maxy="3.3175521992002428E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=1614bc50-35fa-48c3-87f7-acb4a115a4eb"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:college_univ</Name>
+          <Title>geonode:college_univ</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acollege_univ"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:dams</Name>
+        <Title>Dams</Title>
+        <Abstract>geonode.public.dams POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>dams</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.32827604633007" miny="32.17862237413273" maxx="-78.53404711188332" maxy="35.21811454935597"/>
+        <BoundingBox SRS="EPSG:26917" minx="288028.40625" miny="3562720.5" maxx="724516.0625" maxy="3897233.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.32827604633007" miny="32.17862237413273" maxx="-78.53404711188332" maxy="35.21811454935597"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9276061.2581588" miny="3763969.989374859" maxx="-8742370.134429809" maxy="4168869.109221701"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9276061.2581588" miny="3786780.4952648007" maxx="-8742370.134429809" maxy="4193561.687080347"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9276061.2581588" miny="3786780.4952648007" maxx="-8742370.134429809" maxy="4193561.687080347"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1659167853847204E8" miny="1.0224004893170348E8" maxx="1.2099220436065558E8" maxy="1.915031389215527E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7398414.701674115" miny="2.8250249015427433E7" maxx="-4195531.862821839" maxy="3.359510925295878E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=c127dab3-d84f-431e-b8fe-c5726c57cd28"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:dams</Name>
+          <Title>geonode:dams</Title>
+          <LegendURL width="82" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Adams"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:dams_jurisdictions</Name>
+        <Title> DHEC Permitted Dams in South Carolina </Title>
+        <Abstract>geonode.public.dams_jurisdictions POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>dams_jurisdictions</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.30413700943576" miny="32.169571387120584" maxx="-78.55820764276166" maxy="35.20318112618459"/>
+        <BoundingBox SRS="EPSG:26917" minx="290189.27" miny="3561668.7607" maxx="722355.2405" maxy="3895577.6313"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.30413700943576" miny="32.169571387120584" maxx="-78.55820764276166" maxy="35.20318112618459"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9273374.112863485" miny="3762785.3463799856" maxx="-8745059.672424478" maxy="4166843.5425585317"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9273374.112863485" miny="3785590.146957763" maxx="-8745059.672424478" maxy="4191527.042962629"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9273374.112863485" miny="3785590.146957763" maxx="-8745059.672424478" maxy="4191527.042962629"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1658477324662876E8" miny="1.026420685663058E8" maxx="1.2094372993260682E8" maxy="1.917788691680218E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7401645.642684586" miny="2.8271651028789148E7" maxx="-4212360.424302892" maxy="3.3586840688136525E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=a9eb39ec-4ac9-44e5-8cc0-047224c1fc34"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:dams_jurisdictions</Name>
+          <Title>geonode:dams_jurisdictions</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Adams_jurisdictions"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:ems</Name>
+        <Title>EMS</Title>
+        <Abstract>geonode.public.ems POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>ems</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.16682808282819" miny="32.078924885169485" maxx="-78.62395740915449" maxy="35.19681972910168"/>
+        <BoundingBox SRS="EPSG:26917" minx="302685.28125" miny="3551483.75" maxx="716380.0625" maxy="3894875.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.16682808282819" miny="32.078924885169485" maxx="-78.62395740915449" maxy="35.19681972910168"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9258088.953072159" miny="3750927.5802013464" maxx="-8752378.902939105" maxy="4165980.7980337115"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9258088.953072159" miny="3773675.2093817703" maxx="-8752378.902939105" maxy="4190660.43106809"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9258088.953072159" miny="3773675.2093817703" maxx="-8752378.902939105" maxy="4190660.43106809"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1691960134588775E8" miny="1.0292941715089023E8" maxx="1.2073738580825837E8" maxy="1.9423502459069428E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7459508.355244688" miny="2.8306042770099424E7" maxx="-4256414.77015287" maxy="3.357434219382007E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=d88324af-6cad-428d-ab2b-84cff6e926d6"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:ems</Name>
+          <Title>geonode:ems</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aems"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:etv_microwave</Name>
+        <Title>ETV Microwave locations </Title>
+        <Abstract>geonode.public.etv_microwave POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>etv_microwave</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.41151643825933" miny="32.40577832572447" maxx="-79.08494283143784" maxy="35.00278226792386"/>
+        <BoundingBox SRS="EPSG:26917" minx="371184.2022" miny="3586934.2084" maxx="674789.0172" maxy="3873380.5938"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.41151643825933" miny="32.40577832572447" maxx="-79.08494283143784" maxy="35.00278226792386"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9174008.045408523" miny="3793740.4914218416" maxx="-8803695.565410811" maxy="4139697.7295676894"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9174008.045408523" miny="3816693.9941948736" maxx="-8803695.565410811" maxy="4164259.2495899755"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9174008.045408523" miny="3816693.9941948736" maxx="-8803695.565410811" maxy="4164259.2495899755"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1806039681669883E8" miny="1.0861960079370107E8" maxx="1.193212050574017E8" maxy="1.8413041385727182E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7147061.112383641" miny="2.8659315842701674E7" maxx="-4596038.570814044" maxy="3.2736392866977744E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=62e87c7e-ce6e-4902-b21c-2b0249d478e3"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:etv_microwave</Name>
+          <Title>geonode:etv_microwave</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aetv_microwave"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:faults</Name>
+        <Title>Earthquake Faults</Title>
+        <Abstract>No abstract provided</Abstract>
+        <KeywordList>
+          <Keyword>faults</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.35411836613251" miny="32.16496734518497" maxx="-78.61641252373795" maxy="35.200993675478315"/>
+        <BoundingBox SRS="EPSG:26917" minx="285628.8741" miny="3561043.2213" maxx="717056.7024" maxy="3895332.9686"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.35411836613251" miny="32.16496734518497" maxx="-78.61641252373795" maxy="35.200993675478315"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9278938.012040123" miny="3762182.789640675" maxx="-8751539.010136444" maxy="4166546.868725999"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9278938.012040123" miny="3784984.68782535" maxx="-8751539.010136444" maxy="4191229.039318847"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9278938.012040123" miny="3784984.68782535" maxx="-8751539.010136444" maxy="4191229.039318847"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.163090831076373E8" miny="1.0281589101343882E8" maxx="1.2121767971692611E8" maxy="1.9226639093772855E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7396549.466263689" miny="2.8299701464237608E7" maxx="-4199209.0557821905" maxy="3.3629204795857765E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=65d56ae7-75b3-401a-b1a5-798f7b7109a1"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:faults</Name>
+          <Title>geonode:faults</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afaults"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fire_stations</Name>
+        <Title>Fire Stations</Title>
+        <Abstract>geonode.public.fire_stations POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>fire_stations</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.29384995629626" miny="32.06675399818938" maxx="-78.55223335325618" maxy="35.19881524976627"/>
+        <BoundingBox SRS="EPSG:26917" minx="291115.5" miny="3550274.5" maxx="722911.625" maxy="3895094.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.29384995629626" miny="32.06675399818938" maxx="-78.55223335325618" maxy="35.19881524976627"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9272228.963346232" miny="3749336.371432273" maxx="-8744394.617558878" maxy="4166251.4269246366"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9272228.963346232" miny="3772076.3198999306" maxx="-8744394.617558878" maxy="4190932.2731562275"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9272228.963346232" miny="3772076.3198999306" maxx="-8744394.617558878" maxy="4190932.2731562275"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1661585611802916E8" miny="1.0273246553550342E8" maxx="1.2088728174201873E8" maxy="1.947200857649422E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7478892.8584807925" miny="2.827198121674247E7" maxx="-4218217.4497976275" maxy="3.3678720304689184E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=de30a9e6-d8d4-4bca-94e6-0fbe4c9bc58f"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fire_stations</Name>
+          <Title>geonode:fire_stations</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afire_stations"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:flood-pplains</Name>
+        <Title>Flood Plains</Title>
+        <Abstract>No abstract provided</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>flood-pplains</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.36772994218427" miny="32.024360188722945" maxx="-78.50855868839744" maxy="35.20523515313261"/>
+        <BoundingBox SRS="EPSG:26917" minx="284399.679764871" miny="3545658.8142" maxx="726874.458125" maxy="3895805.00482484"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36772994218427" miny="32.024360188722945" maxx="-78.50855868839744" maxy="35.20523515313261"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280453.245755099" miny="3743795.5187064162" maxx="-8739532.776106237" maxy="4167122.1280840198"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280453.245755099" miny="3766508.7053941796" maxx="-8739532.776106237" maxy="4191806.877153923"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280453.245755099" miny="3766508.7053941796" maxx="-8739532.776106237" maxy="4191806.877153923"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1645965180918127E8" miny="1.0249060570446718E8" maxx="1.209866076190937E8" maxy="1.9602547197806355E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7516712.292967496" miny="2.8247663726068303E7" maxx="-4192433.585793146" maxy="3.377387540361885E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=29d311d7-efe2-4772-8438-b46fe2b08930"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:flood-pplains</Name>
+          <Title>geonode:flood-pplains</Title>
+          <LegendURL width="49" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aflood-pplains"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:h2obodies</Name>
+        <Title>Waterbodies</Title>
+        <Abstract>geonode.public.h2obodies MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>h2obodies</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.39244886716978" miny="31.99845914009943" maxx="-78.48337192075914" maxy="35.21892974560177"/>
+        <BoundingBox SRS="EPSG:26917" minx="282183.65625" miny="3542835.75" maxx="729131.5" maxy="3897323.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.39244886716978" miny="31.99845914009943" maxx="-78.48337192075914" maxy="35.21892974560177"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9283204.943897443" miny="3740411.537081169" maxx="-8736728.997958012" maxy="4168979.6931075454"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9283204.943897443" miny="3763108.3670380684" maxx="-8736728.997958012" maxy="4193672.7664433327"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9283204.943897443" miny="3763108.3670380684" maxx="-8736728.997958012" maxy="4193672.7664433327"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.164623382860313E8" miny="1.0211664281980148E8" maxx="1.2102987808486786E8" maxy="1.9676681472734222E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7539554.433498112" miny="2.8226719953267716E7" maxx="-4176206.9470340386" maxy="3.3816771942006074E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=cef24db2-b918-41eb-8f85-da8294e06b45"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:h2obodies</Name>
+          <Title>h2obodies</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ah2obodies"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:h2osheds</Name>
+        <Title>Watersheds</Title>
+        <Abstract>geonode.public.h2osheds MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>h2osheds</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.39301449708995" miny="31.998410032364728" maxx="-78.48986609940324" maxy="35.23943639081939"/>
+        <BoundingBox SRS="EPSG:26917" minx="282186.90625" miny="3542815.75" maxx="728482.25" maxy="3899597.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.39301449708995" miny="31.998410032364728" maxx="-78.48986609940324" maxy="35.23943639081939"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9283267.909532132" miny="3740405.122054396" maxx="-8737451.926617794" maxy="4171761.851623734"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9283267.909532133" miny="3763101.920994829" maxx="-8737451.926617794" maxy="4196467.387238797"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9283267.909532133" miny="3763101.920994829" maxx="-8737451.926617794" maxy="4196467.387238797"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1651461928243163E8" miny="1.0164836675952084E8" maxx="1.211143959807492E8" maxy="1.967939060725533E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7538591.586756771" miny="2.821540513509211E7" maxx="-4162610.4538204763" maxy="3.381692033571831E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=1a6aa50f-3036-4f37-8793-563c001eb01a"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:h2osheds</Name>
+          <Title>geonode:h2osheds</Title>
+          <LegendURL width="349" height="740">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ah2osheds"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:hospital</Name>
+        <Title>Hospitals</Title>
+        <Abstract>geonode.public.hospital POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>hospital</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.02025664281625" miny="32.18957541247435" maxx="-78.60752315166194" maxy="35.10516781895762"/>
+        <BoundingBox SRS="EPSG:26917" minx="315833.84375" miny="3563796.0" maxx="718121.9375" maxy="3884721.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.02025664281625" miny="32.18957541247435" maxx="-78.60752315166194" maxy="35.10516781895762"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9241772.695005193" miny="3765403.7423342406" maxx="-8750549.44976347" maxy="4153558.3514460106"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9241772.695005193" miny="3788221.1517189066" maxx="-8750549.44976347" maxy="4178182.2308038482"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9241772.695005193" miny="3788221.1517189066" maxx="-8750549.44976347" maxy="4178182.2308038482"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1714587348665923E8" miny="1.0506445676951447E8" maxx="1.2001131262006177E8" maxy="1.9052586548088288E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7380036.975949032" miny="2.8362823363353528E7" maxx="-4358514.831273226" maxy="3.3362733429133542E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=26fe6811-575f-4f84-8263-0d1890bca8a9"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:hospital</Name>
+          <Title>geonode:hospital</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ahospital"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:hwy_patrol</Name>
+        <Title>Highway Patrol</Title>
+        <Abstract>geonode.public.hwy_patrol POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>hwy_patrol</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.78567036937424" miny="32.86951023999935" maxx="-79.01983176514602" maxy="34.97735944979622"/>
+        <BoundingBox SRS="EPSG:26917" minx="336974.6873" miny="3638475.9647" maxx="680791.2267" maxy="3870536.6428"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.78567036937424" miny="32.86951023999935" maxx="-79.01983176514602" maxy="34.97735944979622"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9215658.670498537" miny="3854752.1348372367" maxx="-8796447.434666198" maxy="4136258.78575377"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9215658.670498537" miny="3877996.4111610884" maxx="-8796447.434666198" maxy="4160804.809220716"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9215658.670498537" miny="3877996.4111610884" maxx="-8796447.434666198" maxy="4160804.809220716"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1680347402970415E8" miny="1.0908704466159885E8" maxx="1.2002791875975952E8" maxy="1.7165404804607642E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-6821566.520759224" miny="2.8647037940787546E7" maxx="-4509100.843857329" maxy="3.2560613879957348E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=a20a010a-af16-4fd6-a4a6-185bf59dac63"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:hwy_patrol</Name>
+          <Title>geonode:hwy_patrol</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ahwy_patrol"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:jails</Name>
+        <Title>Correctional Facilities </Title>
+        <Abstract>geonode.public.jails POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>jails</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.0984358907546" miny="32.407922640887826" maxx="-79.00216445937819" maxy="35.087344805234785"/>
+        <BoundingBox SRS="EPSG:26917" minx="308660.9375" miny="3587473.5" maxx="682161.0625" maxy="3882730.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.0984358907546" miny="32.407922640887826" maxx="-79.00216445937819" maxy="35.087344805234785"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9250475.56907629" miny="3794021.8796525677" maxx="-8794480.719184434" maxy="4151144.2686643675"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9250475.56907629" miny="3816976.730534867" maxx="-8794480.719184434" maxy="4175757.298442936"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9250475.56907629" miny="3816976.730534867" maxx="-8794480.719184434" maxy="4175757.298442936"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.196536115618962E8" miny="1.0615000585811837E8" maxx="1.1766108589296556E8" maxy="1.8513550284888193E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7157226.252783283" miny="2.855904114009241E7" maxx="-4347967.789232622" maxy="3.3215378460143022E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=9b01ed30-ccfe-4014-afb9-7bf1f2e8d7d2"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:jails</Name>
+          <Title>geonode:jails</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ajails"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:jurisdictions_dams_chart</Name>
+        <Title> DHEC Permitted Dams by Class by Jurisdiction</Title>
+        <Abstract>geonode.public.jurisdictions_dams_chart MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>jurisdictions_dams_chart</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.36829718563203" miny="32.01464592988563" maxx="-78.50751359607301" maxy="35.22350728879081"/>
+        <BoundingBox SRS="EPSG:26917" minx="284396.287900001" miny="3544582.0961" maxx="726918.873900002" maxy="3897831.401"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36829718563203" miny="32.01464592988563" maxx="-78.50751359607301" maxy="35.22350728879081"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280516.391006859" miny="3742526.2339998023" maxx="-8739416.436960848" maxy="4169600.671781563"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280516.391006859" miny="3765233.2866085325" maxx="-8739416.436960848" maxy="4194296.5272580325"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280516.391006859" miny="3765233.2866085325" maxx="-8739416.436960848" maxy="4194296.5272580325"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1651798010960856E8" miny="1.0205862479971397E8" maxx="1.2104467838399142E8" maxy="1.9630732403989846E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7524039.101526028" miny="2.8234467107951812E7" maxx="-4180288.4235917833" maxy="3.3783320022274174E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=4801d065-801a-4e5d-ae05-1b17c0c82fdf"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:jurisdictions_dams_chart</Name>
+          <Title>geonode:jurisdictions_dams_chart</Title>
+          <LegendURL width="95" height="76">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/styles/geonode/http://www.scemdmitigation.org/sld_icons/chart.png"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:law_enforcement</Name>
+        <Title>Law Enforcement </Title>
+        <Abstract>geonode.public.law_enforcement POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>law_enforcement</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.15950675558842" miny="32.10910398404836" maxx="-78.62531155042488" maxy="35.19661422425043"/>
+        <BoundingBox SRS="EPSG:26917" minx="303351.90625" miny="3554829.0" maxx="716257.1875" maxy="3894852.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.15950675558842" miny="32.10910398404836" maxx="-78.62531155042488" maxy="35.19661422425043"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9257273.946651896" miny="3754874.086622546" maxx="-8752529.645255787" maxy="4165952.9282197696"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9257273.946651896" miny="3777640.7564643426" maxx="-8752529.645255787" maxy="4190632.436313631"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9257273.946651896" miny="3777640.7564643426" maxx="-8752529.645255787" maxy="4190632.436313631"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1694156959236878E8" miny="1.0293706691055427E8" maxx="1.2072124889538449E8" maxy="1.9333980054156265E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7436798.850185801" miny="2.8306803195844747E7" maxx="-4258667.095666544" maxy="3.354003008457551E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=ba4e3405-903e-4164-856b-0fed2eaa837e"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:law_enforcement</Name>
+          <Title>geonode:law_enforcement</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alaw_enforcement"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:lgr_towers</Name>
+        <Title>LGR (LocalGovt Radio) Towers</Title>
+        <Abstract>geonode.public.lgr_towers POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>lgr_towers</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.41051999979646" miny="32.70601843190645" maxx="-79.72507948730079" maxy="34.94944072404896"/>
+        <BoundingBox SRS="EPSG:26917" minx="371191.305" miny="3619531.675" maxx="616422.8833" maxy="3867438.3561"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.41051999979646" miny="32.70601843190645" maxx="-79.72507948730079" maxy="34.94944072404896"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9173897.122386228" miny="3833205.5841200226" maxx="-8874955.251979584" maxy="4132483.461491418"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9173897.122386228" miny="3856347.5233147433" maxx="-8874955.251979584" maxy="4157012.4613221097"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9173897.122386228" miny="3856347.5233147433" maxx="-8874955.251979584" maxy="4157012.4613221097"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1908063172584134E8" miny="1.111951796320764E8" maxx="1.1847515594677806E8" maxy="1.767019675957039E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-6815931.8752318965" miny="2.9008137038256347E7" maxx="-4631332.788211985" maxy="3.2465561401373602E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=b923bb4f-0b12-4beb-802d-25eaffe3133e"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:lgr_towers</Name>
+          <Title>geonode:lgr_towers</Title>
+          <LegendURL width="45" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Algr_towers"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:mitigation_strategies</Name>
+        <Title>Mitigation Strategies</Title>
+        <Abstract>No abstract provided</Abstract>
+        <KeywordList>
+          <Keyword>mitigation_strategies</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-80.3258971935953" miny="33.533610874608" maxx="-79.5754393888637" maxy="34.2034141132431"/>
+        <BoundingBox SRS="EPSG:4326" minx="-80.3258971935953" miny="33.533610874608" maxx="-79.5754393888637" maxy="34.2034141132431"/>
+        <BoundingBox SRS="EPSG:3785" minx="-8941837.97310387" miny="3942736.572254626" maxx="-8858297.392419312" maxy="4032121.2453479124"/>
+        <BoundingBox SRS="EPSG:3857" minx="-8941837.97310387" miny="3966347.968796833" maxx="-8858297.392419312" maxy="4056148.385025001"/>
+        <BoundingBox SRS="EPSG:900913" minx="-8941837.97310387" miny="3966347.968796833" maxx="-8858297.392419312" maxy="4056148.385025001"/>
+        <BoundingBox SRS="EPSG:32647" minx="1.0705212447193411E8" miny="1.2986495704663411E8" maxx="1.1398502795126228E8" maxy="1.506875419759512E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-6260596.1651697885" miny="2.9494897821362793E7" maxx="-5648039.467796518" maxy="3.044238911519281E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=d3f1e4f0-2f8d-4a2f-871a-433106840cf7"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:mitigation_strategies</Name>
+          <Title>geonode:mitigation_strategies</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Amitigation_strategies"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:nadm_d0</Name>
+        <Title>Abnormally Dry</Title>
+        <Abstract>geonode.public.nadm_d0 MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>nadm_d0</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.36829718563203" miny="32.01782280048944" maxx="-78.90260684952047" maxy="35.22344732044904"/>
+        <BoundingBox SRS="EPSG:26917" minx="284396.287899999" miny="3544689.1153" maxx="690925.632236683" maxy="3897831.401"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36829718563203" miny="32.01782280048944" maxx="-78.90260684952047" maxy="35.22344732044904"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280516.391006859" miny="3742941.315384514" maxx="-8783398.016750477" maxy="4169592.5363897807"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280516.391006859" miny="3765650.3741051913" maxx="-8783398.016750477" maxy="4194288.355419717"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280516.391006859" miny="3765650.3741051913" maxx="-8783398.016750477" maxy="4194288.355419717"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1966401380067056E8" miny="1.0231527494021773E8" maxx="1.1822865319323543E8" maxy="1.9583014679926124E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7461485.444206077" miny="2.8414759261329323E7" maxx="-4180288.4235917833" maxy="3.378238411608827E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=b2b61685-6dd4-4ee0-b0fe-f653f6909e5f"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:nadm_d0</Name>
+          <Title>geonode:nadm_d0</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Anadm_d0"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:nadm_d1</Name>
+        <Title>Moderate Drought </Title>
+        <Abstract>geonode.public.nadm_d1 MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>nadm_d1</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.43982308627125" miny="32.07649306553356" maxx="-79.4625198139723" maxy="35.16429004294528"/>
+        <BoundingBox SRS="EPSG:26917" minx="368858.502046284" miny="3549877.48658919" maxx="640039.029708347" maxy="3891263.54504703"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.43982308627125" miny="32.07649306553356" maxx="-79.4625198139723" maxy="35.16429004294528"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9177159.127051273" miny="3750609.629599328" maxx="-8845727.242841808" maxy="4161570.1265851837"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9177159.127051273" miny="3773355.7242092118" maxx="-8845727.242841808" maxy="4186229.9785491126"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9177159.127051273" miny="3773355.7242092118" maxx="-8845727.242841808" maxy="4186229.9785491126"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1786368244920675E8" miny="1.0556984511266433E8" maxx="1.209199600636393E8" maxy="1.9499564765029892E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7335468.7571516335" miny="2.871929717416106E7" maxx="-4483981.713738532" maxy="3.3061240677284062E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=ded8bced-ca94-4555-8108-42954c5d9318"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:nadm_d1</Name>
+          <Title>geonode:nadm_d1</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Anadm_d1"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:ng_armories</Name>
+        <Title>National Guard Armories </Title>
+        <Abstract>geonode.public.ng_armories POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>ng_armories</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-82.98715946112227" miny="32.42535044489187" maxx="-78.8522425057797" maxy="35.115987815866156"/>
+        <BoundingBox SRS="EPSG:26917" minx="318876.28125" miny="3589492.0" maxx="695770.5625" maxy="3885908.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-82.98715946112227" miny="32.42535044489187" maxx="-78.8522425057797" maxy="35.115987815866156"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9238088.333592327" miny="3796309.0975223533" maxx="-8777791.483651118" maxy="4155024.1529060327"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9238088.333592327" miny="3819274.903866612" maxx="-8777791.483651118" maxy="4179654.6176391947"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9238088.333592327" miny="3819274.903866612" maxx="-8777791.483651118" maxy="4179654.6176391947"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1687738079502656E8" miny="1.0535034694323592E8" maxx="1.2059523705722685E8" maxy="1.844382098218049E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7169121.555119981" miny="2.8468457865044124E7" maxx="-4360945.0511652" maxy="3.3118004299266882E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=0e627ba3-4310-45a5-be74-2919adce8ad2"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:ng_armories</Name>
+          <Title>geonode:ng_armories</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ang_armories"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:private_schools</Name>
+        <Title>Schools (K-12) - Private Schools</Title>
+        <Abstract>geonode.public.private_schools POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>private_schools</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.33073153977799" miny="32.09973710160104" maxx="-78.60855147404804" maxy="35.13536843791565"/>
+        <BoundingBox SRS="EPSG:26917" minx="287589.59375" miny="3553826.0" maxx="717948.0625" maxy="3888055.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.33073153977799" miny="32.09973710160104" maxx="-78.60855147404804" maxy="35.13536843791565"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9276334.602439066" miny="3753649.0429549096" maxx="-8750663.922087863" maxy="4157650.1664281455"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9276334.602439066" miny="3776409.8037159196" maxx="-8750663.922087863" maxy="4182292.424545299"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9276334.602439066" miny="3776409.8037159196" maxx="-8750663.922087863" maxy="4182292.424545299"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1618802550617445E8" miny="1.0435318684835339E8" maxx="1.2091936898506777E8" maxy="1.9406931056221372E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7446469.093267896" miny="2.8342181595273584E7" maxx="-4249238.875390132" maxy="3.367642618318416E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=1b69f24e-a2bc-4265-a100-9bdab907606b"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:private_schools</Name>
+          <Title>geonode:private_schools</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aprivate_schools"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:public_schools</Name>
+        <Title>Schools (K-12) - Public Schools</Title>
+        <Abstract>geonode.public.public_schools POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>public_schools</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.14912094952354" miny="32.08901629946984" maxx="-78.60566442285975" maxy="35.19799532396818"/>
+        <BoundingBox SRS="EPSG:26917" minx="304301.59375" miny="3552638.75" maxx="718044.0625" maxy="3895007.25"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.14912094952354" miny="32.08901629946984" maxx="-78.60566442285975" maxy="35.19799532396818"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9256117.804009276" miny="3752247.08316588" maxx="-8750342.537019687" maxy="4166140.2292639855"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9256117.804009276" miny="3775001.0799630904" maxx="-8750342.537019687" maxy="4190820.5770169985"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9256117.804009276" miny="3775001.0799630904" maxx="-8750342.537019687" maxy="4190820.5770169985"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1701491266936629E8" miny="1.0286277021456403E8" maxx="1.2064792636404546E8" maxy="1.9382340571135235E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7454613.701738153" miny="2.8296862312869817E7" maxx="-4260762.503320718" maxy="3.3551298192880943E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=89b1d1e3-b7e2-47c0-a4da-2565c75c484f"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:public_schools</Name>
+          <Title>geonode:public_schools</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apublic_schools"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:quakes_1776_2008</Name>
+        <Title>Historical Earthquake Epicenters</Title>
+        <Abstract>geonode.public.quakes_1776_2008 POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>quakes_1776_2008</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Earthquake</Keyword>
+          <Keyword>Earthquakes</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.63021668037689" miny="31.902209395165876" maxx="-78.54294616617003" maxy="35.28654037150773"/>
+        <BoundingBox SRS="EPSG:26917" minx="260715.8125" miny="3532389.75" maxx="723517.3125" maxy="3904823.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.63021668037689" miny="31.902209395165876" maxx="-78.54294616617003" maxy="35.28654037150773"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9309673.135790687" miny="3727844.91889877" maxx="-8743360.772621546" maxy="4178155.188554847"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9309673.135790687" miny="3750480.9246924506" maxx="-8743360.772621546" maxy="4202889.337903552"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9309673.135790687" miny="3750480.9246924506" maxx="-8743360.772621546" maxy="4202889.337903552"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.201186876586737E8" miny="1.0030624325334518E8" maxx="1.1764897156207012E8" maxy="1.9936529026133525E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7600861.061815376" miny="2.8206537451895013E7" maxx="-4061549.648809828" maxy="3.408694585850809E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=386d96ec-0954-47b2-a6da-ab15a73a07d3"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:quakes_1776_2008</Name>
+          <Title>geonode:quakes_1776_2008</Title>
+          <LegendURL width="96" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aquakes_1776_2008"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:s</Name>
+        <Title>Earthquakes - (Peak ground acceleration w/ 2% chance exceeded in 50 yrs)</Title>
+        <Abstract>No abstract provided.</Abstract>
+        <KeywordList>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>s</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.37209352054049" miny="32.00831296221085" maxx="-78.50462288352163" maxy="35.23313257323518"/>
+        <BoundingBox SRS="EPSG:26917" minx="284075.9073394562" miny="3543884.777002078" maxx="727155.4534094562" maxy="3898898.823232078"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.37209352054049" miny="32.00831296221085" maxx="-78.50462288352163" maxy="35.23313257323518"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280938.99707575" miny="3741698.8287960533" maxx="-8739094.644311601" maxy="4170906.530400212"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280938.99707575" miny="3764401.8820853354" maxx="-8739094.644311601" maxy="4195608.235409477"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280938.99707575" miny="3764401.8820853354" maxx="-8739094.644311601" maxy="4195608.235409477"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1654062948182346E8" miny="1.0182647123823735E8" maxx="1.2107810126340553E8" maxy="1.9649360908229625E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7529139.298458916" miny="2.8226459230145186E7" maxx="-4172874.800508404" maxy="3.3792047304788895E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=c83c7e18-537c-11e8-a89a-0242ac150005"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:s</Name>
+          <Title>s</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3As"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:sc_counties</Name>
+        <Title>Counties</Title>
+        <Abstract>geonode.public.sc_counties MULTIPOLYGON EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>sc_counties</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.36829718563203" miny="32.01464592988563" maxx="-78.50751359607303" maxy="35.22350728879081"/>
+        <BoundingBox SRS="EPSG:26917" minx="284396.2879" miny="3544582.0961" maxx="726918.8739" maxy="3897831.401"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.36829718563203" miny="32.01464592988563" maxx="-78.50751359607303" maxy="35.22350728879081"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9280516.391006859" miny="3742526.2339998023" maxx="-8739416.43696085" maxy="4169600.671781563"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9280516.391006859" miny="3765233.2866085325" maxx="-8739416.43696085" maxy="4194296.5272580325"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9280516.391006859" miny="3765233.2866085325" maxx="-8739416.43696085" maxy="4194296.5272580325"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1651798010960844E8" miny="1.0205862479971401E8" maxx="1.2104467838399142E8" maxy="1.9630732403989866E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7524039.101526026" miny="2.8234467107951827E7" maxx="-4180288.4235917833" maxy="3.3783320022274174E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=236ca9b3-cc26-41e6-a984-9a269ab7ca1a"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:sc_counties</Name>
+          <Title>geonode:sc_counties</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asc_counties"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:scdot_bridges</Name>
+        <Title>Highway Bridges</Title>
+        <Abstract>geonode.public.scdot_bridges MULTIPOINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>scdot_bridges</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.3409891100888" miny="32.120979731233675" maxx="-78.53158671115376" maxy="35.21836984115508"/>
+        <BoundingBox SRS="EPSG:26917" minx="286870.78125" miny="3556330.5" maxx="724739.5625" maxy="3897261.75"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.3409891100888" miny="32.120979731233675" maxx="-78.53158671115376" maxy="35.21836984115508"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9277476.469942842" miny="3756427.4335404946" maxx="-8742096.243873447" maxy="4168903.7402213644"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9277476.469942842" miny="3779201.594279182" maxx="-8742096.243873447" maxy="4193596.4732471844"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9277476.469942842" miny="3779201.594279182" maxx="-8742096.243873447" maxy="4193596.4732471844"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1655346343458197E8" miny="1.0222902673519892E8" maxx="1.2101965235659826E8" maxy="1.9321007388627785E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7441443.071765014" miny="2.8248956886483766E7" maxx="-4191648.357593379" maxy="3.366037566809603E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=3718b9e2-5fee-4fb0-afd5-cb544b4bb27e"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:scdot_bridges</Name>
+          <Title>geonode:scdot_bridges</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ascdot_bridges"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:scdot_locations</Name>
+        <Title>SCDOT Facilities</Title>
+        <Abstract>geonode.public.scdot_locations MULTIPOINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>scdot_locations</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.06781045346378" miny="32.38291271480374" maxx="-78.68206369664182" maxy="35.13021060069672"/>
+        <BoundingBox SRS="EPSG:26917" minx="311553.84375" miny="3585098.0" maxx="711256.625" maxy="3887490.25"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.06781045346378" miny="32.38291271480374" maxx="-78.68206369664182" maxy="35.13021060069672"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9247066.360991754" miny="3790740.3661626996" maxx="-8758847.265274083" maxy="4156951.234075377"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9247066.360991754" miny="3813679.491508917" maxx="-8758847.265274083" maxy="4181590.353856712"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9247066.360991754" miny="3813679.491508917" maxx="-8758847.265274083" maxy="4181590.353856712"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1693995781005108E8" miny="1.0463392236729364E8" maxx="1.2041114696465658E8" maxy="1.8532800830120534E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7226550.565007176" miny="2.8379586092118934E7" maxx="-4328522.476530568" maxy="3.3213183605688788E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=25615665-c056-4cef-9155-d59b58171236"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:scdot_locations</Name>
+          <Title>geonode:scdot_locations</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ascdot_locations"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:scdot_roads</Name>
+        <Title>Roads</Title>
+        <Abstract>geonode.public.scdot_roads MULTILINESTRING EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>scdot_roads</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.3548991066061" miny="32.02140341257204" maxx="-78.52460337377948" maxy="35.21941985754853"/>
+        <BoundingBox SRS="EPSG:26917" minx="285606.1875" miny="3545297.5" maxx="725373.0" maxy="3897378.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.3548991066061" miny="32.02140341257204" maxx="-78.52460337377948" maxy="35.21941985754853"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9279024.923672084" miny="3743409.165967528" maxx="-8741318.862312904" maxy="4169046.178844715"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9279024.923672084" miny="3766120.485666707" maxx="-8741318.862312904" maxy="4193739.5500686043"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9279024.923672084" miny="3766120.485666707" maxx="-8741318.862312904" maxy="4193739.5500686043"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1652141584874502E8" miny="1.0218995205990966E8" maxx="1.210410407695078E8" maxy="1.9613043588450924E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7516592.191379329" miny="2.8245059191578194E7" maxx="-4186890.7414430603" maxy="3.3767147244723655E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=d5072751-c587-48a6-a782-a92a60ed1a77"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:scdot_roads</Name>
+          <Title>geonode:scdot_roads</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ascdot_roads"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:seoc_scemd</Name>
+        <Title>seoc_scemd</Title>
+        <Abstract>geonode.public.seoc_scemd POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>seoc_scemd</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-81.10111082848901" miny="33.91069097174499" maxx="-81.10108917258873" maxy="33.91070902757683"/>
+        <BoundingBox SRS="EPSG:26917" minx="490652.8738" miny="3752258.2428" maxx="490654.8738" maxy="3752260.2428"/>
+        <BoundingBox SRS="EPSG:4326" minx="-81.10111082848901" miny="33.91069097174499" maxx="-81.10108917258873" maxy="33.91070902757683"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9028134.360196242" miny="3992924.8839686806" maxx="-9028131.94947245" maxy="3992927.294729501"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9028134.360196242" miny="4016816.3004816123" maxx="-9028131.94947245" maxy="4016818.722395533"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9028134.360196242" miny="4016816.3004816123" maxx="-9028131.94947245" maxy="4016818.722395533"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1447832754341765E8" miny="1.4280864033159715E8" maxx="-1.1447812902170631E8" maxy="1.4280922638265055E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-5667898.626682899" miny="3.058381865626E7" maxx="-5667880.9564743955" maxy="3.0583846617501646E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=6f30534c-b0ec-43f0-8765-1684b7f7697e"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:seoc_scemd</Name>
+          <Title>seoc_scemd</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aseoc_scemd"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:shake</Name>
+        <Title>Shake map Intensity</Title>
+        <Abstract>No abstract provided.</Abstract>
+        <KeywordList>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>shake</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-84.39815764785614" miny="32.268912235936746" maxx="-81.44991090083857" maxy="32.84899221679714"/>
+        <BoundingBox SRS="EPSG:26917" minx="181779.42829011398" miny="3575255.1626850204" maxx="457648.47373948817" maxy="3634637.1436546315"/>
+        <BoundingBox SRS="EPSG:4326" minx="-84.39815764785614" miny="32.268912235936746" maxx="-81.44991090083857" maxy="32.84899221679714"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9395159.933249772" miny="3775794.1416729996" maxx="-9066962.606638853" maxy="3852045.872499647"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9395159.933249772" miny="3798661.5300391214" maxx="-9066962.606638853" maxy="3875277.3162597767"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9395159.933249772" miny="3798661.5300391214" maxx="-9066962.606638853" maxy="3875277.3162597767"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.0675742222864874E8" miny="1.5686743058353433E8" maxx="-8.977475446784356E7" maxy="1.859447023939424E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-6798375.1312904935" miny="3.1718095430991083E7" maxx="-5697770.474168512" maxy="3.435965859693921E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=216a31ec-5440-11e8-a549-0242ac150005"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:shake</Name>
+          <Title>shake</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ashake"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:slosh</Name>
+        <Title>SLOSH MOMS</Title>
+        <Abstract>No abstract provided.</Abstract>
+        <KeywordList>
+          <Keyword>slosh</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-81.30349156554823" miny="32.02439338310065" maxx="-78.53403526964627" maxy="34.12183535606877"/>
+        <BoundingBox SRS="EPSG:26917" minx="472013.1497" miny="3545676.2792" maxx="727493.1497" maxy="3775676.2792"/>
+        <BoundingBox SRS="EPSG:4326" minx="-81.30349156554823" miny="32.02439338310065" maxx="-78.53403526964627" maxy="34.12183535606877"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9050663.28079204" miny="3743799.856183935" maxx="-8742368.81615801" maxy="4021151.6192853125"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9050663.28079204" miny="3766513.063831175" maxx="-8742368.81615801" maxy="4045173.2935051536"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9050663.28079204" miny="3766513.063831175" maxx="-8742368.81615801" maxy="4045173.2935051536"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1446927815701258E8" miny="1.2873757027847376E8" maxx="1.1620443947924185E8" maxy="1.954204488398464E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7517646.534382389" miny="2.9019457650331236E7" maxx="-5473252.097354996" maxy="3.2305784268791668E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=e2304316-2c32-11e8-a8b3-0242ac160006"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:slosh</Name>
+          <Title>geonode:slosh</Title>
+          <LegendURL width="33" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aslosh"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:waste_h2o_epa</Name>
+        <Title>Wastewater Facilities - EPA</Title>
+        <Abstract>geonode.public.waste_h2o_epa POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>waste_h2o_epa</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.09962368866263" miny="32.10156340665129" maxx="-78.65753500596246" maxy="35.195969925277566"/>
+        <BoundingBox SRS="EPSG:26917" minx="308806.78125" miny="3553930.5" maxx="713322.125" maxy="3894782.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.09962368866263" miny="32.10156340665129" maxx="-78.65753500596246" maxy="35.195969925277566"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9250607.794134578" miny="3753887.885513371" maxx="-8756116.743917832" maxy="4165865.551218151"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9250607.794134578" miny="3776649.7984445416" maxx="-8756116.743917832" maxy="4190544.6675963067"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9250607.794134578" miny="3776649.7984445416" maxx="-8756116.743917832" maxy="4190544.6675963067"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1708862718802981E8" miny="1.0301995325877534E8" maxx="1.2064749329592575E8" maxy="1.934920577876649E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7437740.805020843" miny="2.8321960975973174E7" maxx="-4276388.163767564" maxy="3.350383724102986E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=27011b4e-aaca-4536-8d87-1351769b1d0c"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:waste_h2o_epa</Name>
+          <Title>geonode:waste_h2o_epa</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Awaste_h2o_epa"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:waste_h2o_sites</Name>
+        <Title>Wastewater Facilities - sites</Title>
+        <Abstract>geonode.public.waste_h2o_sites POINT EPSG:26917</Abstract>
+        <KeywordList>
+          <Keyword>waste_h2o_sites</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:26917</SRS>
+        <LatLonBoundingBox minx="-83.13604025092467" miny="32.149568182076365" maxx="-78.52568468966679" maxy="35.202873773337565"/>
+        <BoundingBox SRS="EPSG:26917" minx="305505.21875" miny="3559515.0" maxx="725319.875" maxy="3895554.5"/>
+        <BoundingBox SRS="EPSG:4326" minx="-83.13604025092467" miny="32.149568182076365" maxx="-78.52568468966679" maxy="35.202873773337565"/>
+        <BoundingBox SRS="EPSG:3785" minx="-9254661.66730203" miny="3760167.638327797" maxx="-8741439.233846866" maxy="4166801.8572250823"/>
+        <BoundingBox SRS="EPSG:3857" minx="-9254661.66730203" miny="3782959.827766732" maxx="-8741439.233846866" maxy="4191485.170783178"/>
+        <BoundingBox SRS="EPSG:900913" minx="-9254661.66730203" miny="3782959.827766732" maxx="-8741439.233846866" maxy="4191485.170783178"/>
+        <BoundingBox SRS="EPSG:32647" minx="-1.1721175315080371E8" miny="1.0257931562154035E8" maxx="1.2042286966956748E8" maxy="1.9174530440116856E8"/>
+        <BoundingBox SRS="EPSG:32736" minx="-7421179.493964638" miny="2.8257013884117022E7" maxx="-4261329.2286279" maxy="3.3482195068879224E7"/>
+        <Attribution>
+          <Title>admin</Title>
+        </Attribution>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=0773a7d4-ecc3-4521-8985-8830b46e1ce7"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:waste_h2o_sites</Name>
+          <Title>geonode:waste_h2o_sites</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.scemdmitigation.org/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Awaste_h2o_sites"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMT_MS_Capabilities>
