@@ -14,8 +14,8 @@ type OnlineResource struct {
 
 //KeywordList tag
 type KeywordList struct {
-	XMLName xml.Name  `xml:"KeywordList"`
-	Keyword []*string `xml:"Keyword"`
+	XMLName xml.Name  `xml:"KeywordList,omitempty"`
+	Keyword []*string `xml:"Keyword,omitempty"`
 }
 
 //Get tag
@@ -33,20 +33,21 @@ type Post struct {
 //HTTP tag
 type HTTP struct {
 	XMLName xml.Name `xml:"HTTP"`
-	Get     *Get     `xml:"Get"`
-	Post    *Post    `xml:"Post"`
+	Get     *Get     `xml:"Get,omitempty"`
+	Post    *Post    `xml:"Post,omitempty"`
 }
 
 //DCPType tag
 type DCPType struct {
-	XMLName xml.Name `xml:"DCPType"`
-	HTTP    HTTP     `xml:"HTTP"`
+	XMLName xml.Name `xml:"DCPType,omitempty"`
+	HTTP    HTTP     `xml:"HTTP,omitempty"`
 }
 
 //RequestEntry tag
 type RequestEntry struct {
-	Format  []*string `xml:"Format"`
-	DCPType DCPType   `xml:"DCPType"`
+	XMLName xml.Name
+	Format  []*string `xml:"Format,omitempty"`
+	DCPType DCPType   `xml:"DCPType,omitempty"`
 }
 
 //Request tag
@@ -126,17 +127,53 @@ type MetadataURL struct {
 	OnlineResource OnlineResource `xml:"OnlineResource"`
 }
 
+//LogoURL tag
+type LogoURL struct {
+	XMLName        xml.Name       `xml:"LogoURL"`
+	Width          float32        `xml:"width,attr"`
+	Height         float32        `xml:"height,attr"`
+	Format         string         `xml:"Format"`
+	OnlineResource OnlineResource `xml:"OnlineResource"`
+}
+
+//Dimension tag
+type Dimension struct {
+	XMLName xml.Name `xml:"Dimension"`
+	Name    string   `xml:"name,attr,omitempty"`
+	Units   string   `xml:"units,attr,omitempty"`
+}
+
+//Extent tag
+type Extent struct {
+	XMLName xml.Name `xml:"Extent"`
+	Name    string   `xml:"name,attr,omitempty"`
+	Default string   `xml:"default,attr,omitempty"`
+}
+
+//Attribution tag
+type Attribution struct {
+	XMLName        xml.Name       `xml:"Attribution"`
+	Title          string         `xml:"Title,omitempty"`
+	OnlineResource OnlineResource `xml:"OnlineResource,omitempty"`
+	LogoURL        LogoURL        `xml:"LogoURL,omitempty"`
+}
+
 //Layer tag
 type Layer struct {
 	XMLName           xml.Name          `xml:"Layer"`
 	Title             string            `xml:"Title"`
 	Abstract          string            `xml:"Abstract"`
+	Queryable         int8              `xml:"queryable,attr,omitempty"`
 	SRS               []*string         `xml:"SRS,omitempty"`
 	LatLonBoundingBox LatLonBoundingBox `xml:"LatLonBoundingBox,omitempty"`
-	BoundingBox       BoundingBox       `xml:"BoundingBox,omitempty"`
+	BoundingBox       []*BoundingBox    `xml:"BoundingBox,omitempty"`
 	AuthorityURL      AuthorityURL      `xml:"AuthorityURL,omitempty"`
-	Style             []*Style          `xml:"Style"`
-	MetadataURL       []*MetadataURL    `xml:"MetadataURL"`
+	Style             []*Style          `xml:"Style,omitempty"`
+	Layer             []*Layer          `xml:"Layer,omitempty"`
+	MetadataURL       []*MetadataURL    `xml:"MetadataURL,omitempty"`
+	Dimension         Dimension         `xml:"Dimension,omitempty"`
+	Extent            Extent            `xml:"Extent,omitempty"`
+	Attribution       Attribution       `xml:"Attribution,omitempty"`
 }
 
 //Capability tag
