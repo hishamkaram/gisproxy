@@ -91,14 +91,52 @@ type LatLonBoundingBox struct {
 	MaxY    float64  `xml:"maxy,attr"`
 }
 
+//BoundingBox tag
+type BoundingBox struct {
+	XMLName xml.Name `xml:"BoundingBox"`
+	MinX    float64  `xml:"minx,attr"`
+	MinY    float64  `xml:"miny,attr"`
+	MaxX    float64  `xml:"maxx,attr"`
+	MaxY    float64  `xml:"maxy,attr"`
+	SRS     string   `xml:"SRS,attr,omitempty"`
+}
+
+//LegendURL tag
+type LegendURL struct {
+	XMLName        xml.Name       `xml:"LegendURL"`
+	Height         float64        `xml:"height,attr"`
+	Width          float64        `xml:"width,attr"`
+	Format         string         `xml:"Format"`
+	OnlineResource OnlineResource `xml:"OnlineResource"`
+}
+
+//Style tag
+type Style struct {
+	XMLName   xml.Name  `xml:"Style"`
+	Name      string    `xml:"Name"`
+	Title     string    `xml:"Title"`
+	LegendURL LegendURL `xml:"LegendURL"`
+}
+
+//MetadataURL tag
+type MetadataURL struct {
+	XMLName        xml.Name       `xml:"MetadataURL"`
+	Type           string         `xml:"type,attr"`
+	Format         string         `xml:"Format"`
+	OnlineResource OnlineResource `xml:"OnlineResource"`
+}
+
 //Layer tag
 type Layer struct {
 	XMLName           xml.Name          `xml:"Layer"`
 	Title             string            `xml:"Title"`
 	Abstract          string            `xml:"Abstract"`
-	SRS               []*string         `xml:"SRS"`
-	LatLonBoundingBox LatLonBoundingBox `xml:"LatLonBoundingBox"`
-	AuthorityURL      AuthorityURL      `xml:"AuthorityURL"`
+	SRS               []*string         `xml:"SRS,omitempty"`
+	LatLonBoundingBox LatLonBoundingBox `xml:"LatLonBoundingBox,omitempty"`
+	BoundingBox       BoundingBox       `xml:"BoundingBox,omitempty"`
+	AuthorityURL      AuthorityURL      `xml:"AuthorityURL,omitempty"`
+	Style             []*Style          `xml:"Style"`
+	MetadataURL       []*MetadataURL    `xml:"MetadataURL"`
 }
 
 //Capability tag
