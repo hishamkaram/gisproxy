@@ -7,13 +7,13 @@ import (
 )
 
 //SetRouter  set proxy router
-func (server *GISProxy) SetRouter() *GISProxy {
-	server.Router = mux.NewRouter()
-	return server
+func (proxyServer *GISProxy) SetRouter() *GISProxy {
+	proxyServer.Router = mux.NewRouter()
+	return proxyServer
 }
 
 //SetRoutes set proxy routes
-func (server *GISProxy) SetRoutes() *GISProxy {
-	server.Router.PathPrefix("/geoserver").Handler(http.StripPrefix("/geoserver", http.HandlerFunc(server.geoserverHandler())))
-	return server
+func (proxyServer *GISProxy) SetRoutes() *GISProxy {
+	proxyServer.Router.PathPrefix("/geoserver").Handler(http.StripPrefix("/geoserver", http.HandlerFunc(proxyServer.geoserverHandler())))
+	return proxyServer
 }

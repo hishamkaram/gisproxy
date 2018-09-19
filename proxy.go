@@ -32,7 +32,7 @@ type GISProxy struct {
 }
 
 //GetReverseProxy return reverse proxy from url
-func (server *GISProxy) GetReverseProxy(remoteURL string) *httputil.ReverseProxy {
+func (proxyServer *GISProxy) GetReverseProxy(remoteURL string) *httputil.ReverseProxy {
 	remote, err := url.Parse(remoteURL)
 	if err != nil {
 		panic(err)
@@ -40,30 +40,30 @@ func (server *GISProxy) GetReverseProxy(remoteURL string) *httputil.ReverseProxy
 	return httputil.NewSingleHostReverseProxy(remote)
 }
 
-//StartProxyServer start new server
-func (server *GISProxy) StartProxyServer() {
-	server.SetLogger()
-	server.SetRouter()
-	server.SetRoutes()
-	server.MigrateDatabase()
-	server.LoadData()
-	http.Handle("/", server.Router)
+//StartProxyServer start new proxyServer
+func (proxyServer *GISProxy) StartProxyServer() {
+	proxyServer.SetLogger()
+	proxyServer.SetRouter()
+	proxyServer.SetRoutes()
+	proxyServer.MigrateDatabase()
+	proxyServer.LoadData()
+	http.Handle("/", proxyServer.Router)
 	err := http.ListenAndServe(":8081", nil)
 	if err != nil {
-		server.logger.Fatal(err)
+		proxyServer.logger.Fatal(err)
 	}
 }
 
 //SetLogger sets instance logger
-func (server *GISProxy) SetLogger() *GISProxy {
-	server.logger = GetLogger()
-	return server
+func (proxyServer *GISProxy) SetLogger() *GISProxy {
+	proxyServer.logger = GetLogger()
+	return proxyServer
 }
 
 //StartServer GIS Proxy Server
-func (server *GISProxy) StartServer() {
-	http.Handle("/", server.Router)
-	err := http.ListenAndServe(server.Address, nil)
+func (proxyServer *GISProxy) StartServer() {
+	http.Handle("/", proxyServer.Router)
+	err := http.ListenAndServe(proxyServer.Address, nil)
 	if err != nil {
 		panic(err)
 	}
