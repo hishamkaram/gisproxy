@@ -32,15 +32,15 @@ type Server struct {
 //User gisproxy user model
 type User struct {
 	gorm.Model
-	FirstName    string
-	LastName     string
-	UserName     string   `gorm:"size:255;unique;not null"`
-	Password     string   `sql:"type:text;not null"`
-	Email        string   `gorm:"type:varchar(100);unique_index;not null"`
-	IsSuperUser  bool     `gorm:"default:false"`
-	IsStaff      bool     `gorm:"default:false"`
-	Layers       []Layer  `gorm:"ForeignKey:UserID"`
-	SharedLayers []*Layer `gorm:"many2many:layer_permissions;;foreignkey:LayerID"`
+	FirstName       string
+	LastName        string
+	UserName        string  `gorm:"size:255;unique;not null"`
+	Password        string  `sql:"type:text;not null"`
+	Email           string  `gorm:"type:varchar(100);unique_index;not null"`
+	IsSuperUser     bool    `gorm:"default:false"`
+	IsStaff         bool    `gorm:"default:false"`
+	Layers          []Layer `gorm:"ForeignKey:UserID"`
+	LayerPermission []*LayerPermission
 }
 
 //LayerPermission Layer Permissions
@@ -52,6 +52,8 @@ type LayerPermission struct {
 	CanDownload bool `gorm:"default:true"`
 	LayerID     uint
 	UserID      uint
+	Layer       *Layer
+	User        *User
 }
 
 //LayerURL Layer Base URL
@@ -65,11 +67,11 @@ type LayerURL struct {
 //Layer Layer Def
 type Layer struct {
 	gorm.Model
-	Name     string `gorm:"size:255;not null"`
-	ServerID uint
-	UserID   uint
-	URLS     []LayerURL `gorm:"ForeignKey:LayerID"`
-	Users    []*User    `gorm:"many2many:layer_permissions;foreignkey:UserID"`
+	Name             string `gorm:"size:255;not null"`
+	ServerID         uint
+	UserID           uint
+	URLS             []LayerURL `gorm:"ForeignKey:LayerID"`
+	LayerPermissions []*LayerPermission
 }
 
 //BeforeCreate hashing password before insert
@@ -90,56 +92,66 @@ func (databaseConn *DBConnection) buildConnectionStr() string {
 }
 
 //MigrateDatabase MigrateDatabase
-func (server *GISProxy) MigrateDatabase() {
-	db, err := gorm.Open("postgres", server.DB.buildConnectionStr())
+func (proxyServer *GISProxy) MigrateDatabase() {
+	db, err := gorm.Open("postgres", proxyServer.DB.buildConnectionStr())
 	if err != nil {
-		server.logger.Error(err)
+		proxyServer.logger.Error(err)
 	}
 	defer db.Close()
 	db.AutoMigrate(&User{}, &ServerAuth{}, &LayerURL{}, &Layer{}, &Server{}, &LayerPermission{})
 }
 
-//LoadData load default data
-func (server *GISProxy) LoadData() {
-	db, err := gorm.Open("postgres", server.DB.buildConnectionStr())
+//GetDB return a Database Connection
+func (proxyServer *GISProxy) GetDB() (db *gorm.DB, err error) {
+	db, err = gorm.Open("postgres", proxyServer.DB.buildConnectionStr())
 	if err != nil {
-		server.logger.Error(err)
+		proxyServer.logger.Error(err)
+	}
+	return
+}
+
+//LoadData load default data
+func (proxyServer *GISProxy) LoadData() {
+	db, err := proxyServer.GetDB()
+	if err != nil {
+		proxyServer.logger.Error(err)
 	}
 	defer db.Close()
-	db.LogMode(true)
 	var user User
 	db.FirstOrCreate(&user, User{UserName: "admin", FirstName: "Hisham", Password: "admin", LastName: "Karam", Email: "admin@admin.com"})
-	// layerServer := Server{
-	// 	URL:        "http://localhost:8080/geoserver",
-	// 	ServerType: "geoserver",
-	// 	Name:       "geoserver2",
-	// 	AuthInfo: ServerAuth{
-	// 		UserName: "admin",
-	// 		Password: "geoserver",
-	// 		Type:     "Basic",
-	// 	},
-	// 	Active: true,
-	// 	Layers: []Layer{
-	// 		Layer{
-	// 			Name: "geonode:other_healthcare_60cfefd3",
-	// 		},
-	// 	},
-	// }
-	// db.Create(&layerServer)
-	// layerServer.Layers = append(layerServer.Layers, Layer{Name: "hisham:other_healthcare_60cfefd3"})
+	layerServer := Server{
+		URL:        "http://localhost:8080/geoserver",
+		ServerType: "geoserver",
+		Name:       "geoserver2",
+		AuthInfo: ServerAuth{
+			UserName: "admin",
+			Password: "geoserver",
+			Type:     "Basic",
+		},
+		Active: true,
+		Layers: []Layer{
+			Layer{
+				Name: "geonode:other_healthcare_60cfefd3",
+				LayerPermissions: []*LayerPermission{
+					{User: &user},
+				},
+			},
+		},
+	}
+	db.Create(&layerServer)
+	// layerServer.Layers = append(layerServer.Layers, Layer{Name: "geonode:other_healthcare_60cfefd3"})
 	// db.Save(&layerServer)
-	// var users []User
-	// var servers []Server
-	// db.Find(&users)
-	// db.Preload("Layers").Find(&servers)
-	// for _, user := range users {
-	// 	fmt.Println(user.UserName)
-	// 	// fmt.Println(user.Layers)
-	// }
-	// for _, server := range servers {
-	// 	fmt.Println(server.ServerType)
-	// 	fmt.Println(server.AuthInfo)
-	// 	fmt.Println(server.Layers)
-	// 	fmt.Println(server.AuthInfo)
-	// }
+	var users []User
+	var servers []Server
+	db.Find(&users)
+	db.Preload("Layers").Preload("Layers.LayerPermissions").Preload("Layers.LayerPermissions.User").Find(&servers)
+	for _, user := range users {
+		fmt.Println(user.UserName)
+		// fmt.Println(user.Layers)
+	}
+	for _, server := range servers {
+		fmt.Println(server.ServerType)
+		fmt.Println(server.AuthInfo)
+		fmt.Printf("^^^^^^^^^^^^^^%v\n", server.Layers[0].LayerPermissions[0])
+	}
 }
