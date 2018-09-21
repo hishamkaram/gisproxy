@@ -21,14 +21,15 @@ type DBConnection struct {
 
 //GISProxy  type
 type GISProxy struct {
-	Geoserver []string
-	ArcGIS    []string
-	MapServer []string
-	Address   string
+	Geoserver []string       `json:"Geoserver,omitempty"`
+	ArcGIS    []string       `json:"ArcGIS,omitempty"`
+	MapServer []string       `json:"MapServer,omitempty"`
+	Address   string         `validate:"required"`
+	SecretKey string         `validate:"required"`
+	logger    *logrus.Logger `validate:"required"`
+	DB        *DBConnection  `validate:"required"`
+	Router    *mux.Router    `validate:"required"`
 	SSL       bool
-	logger    *logrus.Logger
-	DB        *DBConnection
-	Router    *mux.Router
 }
 
 //GetReverseProxy return reverse proxy from url
@@ -45,6 +46,11 @@ func (proxyServer *GISProxy) StartProxyServer() {
 	proxyServer.SetLogger()
 	proxyServer.SetRouter()
 	proxyServer.SetRoutes()
+	validationErr := Validator.Struct(proxyServer)
+	if validationErr != nil {
+		proxyServer.logger.Fatal(validationErr)
+		panic(validationErr)
+	}
 	proxyServer.MigrateDatabase()
 	proxyServer.LoadData()
 	http.Handle("/", proxyServer.Router)

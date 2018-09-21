@@ -6,8 +6,10 @@ import (
 
 func main() {
 	server := gisproxy.GISProxy{
-		DB:      &gisproxy.DBConnection{Name: "gisproxy", Password: "clogic", Username: "hishamkaram", Port: 5432, Host: "localhost"},
-		Address: ":8081",
+		DB:        &gisproxy.DBConnection{Name: "gisproxy", Password: "clogic", Username: "hishamkaram", Port: 5432, Host: "localhost"},
+		Address:   ":8081",
+		SecretKey: "secret",
+		SSL:       false,
 	}
 	server.StartProxyServer()
 	// data, _ := gisproxy.ReadFile("../data/wms/1.1.1/capabilities_1_1_1.xml")

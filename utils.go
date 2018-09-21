@@ -4,7 +4,11 @@ import (
 	"io/ioutil"
 
 	"github.com/sirupsen/logrus"
+	validator "gopkg.in/go-playground/validator.v9"
 )
+
+//Validator used to validate Data
+var Validator = validator.New()
 
 //GetLogger return logger
 func GetLogger() (logger *logrus.Logger) {

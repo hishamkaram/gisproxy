@@ -14,6 +14,7 @@ func (proxyServer *GISProxy) SetRouter() *GISProxy {
 
 //SetRoutes set proxy routes
 func (proxyServer *GISProxy) SetRoutes() *GISProxy {
-	proxyServer.Router.PathPrefix("/geoserver").Handler(http.StripPrefix("/geoserver", http.HandlerFunc(proxyServer.geoserverHandler())))
+	proxyServer.Router.HandleFunc("/token-auth", proxyServer.generateTokenHandler).Methods("POST")
+	proxyServer.Router.PathPrefix("/geoserver").Handler(http.StripPrefix("/geoserver", http.HandlerFunc(proxyServer.authMiddleware(proxyServer.geoserverHandler))))
 	return proxyServer
 }
