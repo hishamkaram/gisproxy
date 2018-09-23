@@ -51,6 +51,13 @@ func (proxyServer *GISProxy) generateTokenHandler(w http.ResponseWriter, req *ht
 
 }
 
+//userResource return token if user is valid
+func (proxyServer *GISProxy) userResource(w http.ResponseWriter, req *http.Request) {
+	users, count := proxyServer.getUsers()
+	json.NewEncoder(w).Encode(UsersAPIResponse{
+		Objects: users, APIResource: APIResource{APIMeta{Count: count}}})
+}
+
 //ErrorHandler to generate ogc error
 func (proxyServer *GISProxy) errorHandler(w http.ResponseWriter, errMsg string) {
 	xml, err := proxyServer.GenerateExceptionReport(&ServiceExceptionReport{Version: "1.1.1", Exceptions: []ServiceException{

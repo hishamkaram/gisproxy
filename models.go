@@ -1,8 +1,10 @@
 package gisproxy
 
 import (
+	"encoding/json"
 	"fmt"
 	"strconv"
+	"time"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
@@ -37,15 +39,15 @@ type Server struct {
 //User gisproxy user model
 type User struct {
 	gorm.Model
-	FirstName       string  `json:"first_name,omitempty"`
-	LastName        string  `json:"last_name,omitempty"`
-	Username        string  `gorm:"size:255;unique;not null" validate:"required,gte=9,lte=255" json:"username,omitempty"`
-	Password        string  `sql:"type:text;not null" validate:"required,gte=9,lte=100"`
-	Email           string  `gorm:"type:varchar(100);unique_index;not null" validate:"required,email" json:"email,omitempty"`
-	IsSuperUser     bool    `gorm:"default:false"`
-	IsStaff         bool    `gorm:"default:false"`
-	Layers          []Layer `gorm:"ForeignKey:UserID"`
-	LayerPermission []*LayerPermission
+	FirstName       string             `json:"first_name,omitempty"`
+	LastName        string             `json:"last_name,omitempty"`
+	Username        string             `gorm:"size:255;unique;not null" validate:"required,gte=9,lte=255" json:"username,omitempty"`
+	Password        string             `sql:"type:text;not null" validate:"required,gte=9,lte=100"`
+	Email           string             `gorm:"type:varchar(100);unique_index;not null" validate:"required,email" json:"email,omitempty"`
+	IsSuperUser     bool               `gorm:"default:false"`
+	IsStaff         bool               `gorm:"default:false"`
+	Layers          []Layer            `gorm:"ForeignKey:UserID" json:"layers,omitempty"`
+	LayerPermission []*LayerPermission `json:"layer_permissions,omitempty"`
 }
 
 //LayerPermission Layer Permissions
@@ -159,4 +161,44 @@ func (proxyServer *GISProxy) LoadData() {
 		fmt.Println(server.AuthInfo)
 		fmt.Printf("^^^^^^^^^^^^^^%v\n", server.Layers[0].LayerPermissions[0])
 	}
+}
+
+//getUsers all users
+func (proxyServer *GISProxy) getUsers() (users []*User, count int) {
+	db, err := proxyServer.GetDB()
+	if err != nil {
+		proxyServer.logger.Error(err)
+	}
+	defer db.Close()
+	db.Find(&users).Count(&count)
+	return
+}
+func (usr User) MarshalJSON() ([]byte, error) {
+	var apiUserResource struct {
+		ID              uint               `json:"id,omitempty"`
+		CreatedAt       time.Time          `json:"created_at,omitempty"`
+		UpdatedAt       time.Time          `json:"updated_at,omitempty"`
+		DeletedAt       *time.Time         `json:"deleted_at,omitempty"`
+		FirstName       string             `json:"first_name,omitempty"`
+		LastName        string             `json:"last_name,omitempty"`
+		Username        string             `gorm:"size:255;unique;not null" validate:"required,gte=9,lte=255" json:"username,omitempty"`
+		Email           string             `gorm:"type:varchar(100);unique_index;not null" validate:"required,email" json:"email,omitempty"`
+		IsSuperUser     bool               `gorm:"default:false" json:"is_superuser"`
+		IsStaff         bool               `gorm:"default:false" json:"is_staff"`
+		Layers          []Layer            `gorm:"ForeignKey:UserID" json:"layers,omitempty"`
+		LayerPermission []*LayerPermission `json:"layer_permissions,omitempty"`
+	}
+	apiUserResource.Username = usr.Username
+	apiUserResource.FirstName = usr.FirstName
+	apiUserResource.LastName = usr.LastName
+	apiUserResource.Email = usr.Email
+	apiUserResource.IsSuperUser = usr.IsSuperUser
+	apiUserResource.IsStaff = usr.IsStaff
+	apiUserResource.Layers = usr.Layers
+	apiUserResource.LayerPermission = usr.LayerPermission
+	apiUserResource.CreatedAt = usr.CreatedAt
+	apiUserResource.UpdatedAt = usr.UpdatedAt
+	apiUserResource.DeletedAt = usr.DeletedAt
+	apiUserResource.ID = usr.ID
+	return json.Marshal(&apiUserResource)
 }
